@@ -1,4 +1,4 @@
-package com.tools11.caascript.editor.util;
+package com.tools11.caascript.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;

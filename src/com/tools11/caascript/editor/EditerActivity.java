@@ -3,7 +3,8 @@ package com.tools11.caascript.editor;
 import com.tools11.caascript.R;
 import com.tools11.caascript.R.layout;
 import com.tools11.caascript.R.menu;
-import com.tools11.caascript.editor.util.FileUtils;
+import com.tools11.caascript.caascore.CAASEngine;
+import com.tools11.caascript.util.FileUtils;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -28,6 +29,7 @@ public class EditerActivity extends Activity implements View.OnClickListener {
 	private Button mPause;
 	private StringBuffer mfull;
 	private FileUtils mFu;
+	private CAASEngine mCaas;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,8 @@ public class EditerActivity extends Activity implements View.OnClickListener {
 			Toast.makeText(mContext, "save ok", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.run:
+			mCaas = new CAASEngine(mEditText.getText().toString());
+			mCaas.run();
 			break;
 		case R.id.start:
 			break;
