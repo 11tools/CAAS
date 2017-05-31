@@ -1,6 +1,7 @@
 package com.tools11.caascript.util;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -32,5 +33,22 @@ public class FileUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public byte[] loadStringFromFile(String path){
+		byte[] buff = null;
+		File fp = new File(path);
+		long len = fp.length();
+		try {
+			FileInputStream fis= new FileInputStream(fp);
+			buff = new byte[(int) len];
+			fis.read(buff);
+			fis.close();
+			return buff;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
