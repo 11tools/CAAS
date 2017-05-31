@@ -1,5 +1,5 @@
 # CAAS
-Chinese Auto Android Script or Chinese Android Auto Script As u like
+Chinese Auto Android Script or Chinese Android Auto Script As u like   
 中文自动安卓脚本或者中文安卓自动脚本随你便
 
 可以使用如下语法：
@@ -15,3 +15,5 @@ Google+ 启动
      延时 1000   
   循环完    
  
+运行效果   
+![](figures/com.tools11.caascript.png)
